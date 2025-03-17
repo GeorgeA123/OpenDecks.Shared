@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace OpenDecks.Shared.DTOs.Responses
 {
-    public class EventResponse
+    public class EventDto
     {
         public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;
-        public string Status { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
         public DateTime EventDate { get; set; }
         public DateTime ApplicationDeadline { get; set; }
-        public int TotalApplications { get; set; }
+        public string Location { get; set; } = string.Empty;
+        public int MaxApplicants { get; set; }
+        public string Status { get; set; } = string.Empty;
+        public Guid OrganizerId { get; set; }
+        public string OrganizerName { get; set; } = string.Empty;
     }
 }
