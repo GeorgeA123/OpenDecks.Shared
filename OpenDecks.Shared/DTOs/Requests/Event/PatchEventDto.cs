@@ -1,6 +1,12 @@
-﻿namespace OpenDecks.Shared.DTOs.Requests
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OpenDecks.Shared.DTOs.Requests.Event
 {
-    public class CreateEventDto
+    public class PatchEventDto
     {
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
@@ -8,5 +14,6 @@
         public DateTime ApplicationDeadline { get; set; }
         public string Location { get; set; } = string.Empty;
         public int MaxApplicants { get; set; }
+        public string Status { get; set; } = string.Empty;
     }
 }

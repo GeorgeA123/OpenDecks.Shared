@@ -1,10 +1,11 @@
-﻿using System;
+﻿using OpenDecks.Shared.DTOs.Responses.Form;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenDecks.Shared.DTOs.Responses
+namespace OpenDecks.Shared.DTOs.Responses.Event
 {
     public class EventDto
     {
@@ -18,5 +19,7 @@ namespace OpenDecks.Shared.DTOs.Responses
         public string Status { get; set; } = string.Empty;
         public Guid OrganizerId { get; set; }
         public string OrganizerName { get; set; } = string.Empty;
+
+        public FormDto? Form { get; set; }
     }
 }

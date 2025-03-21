@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenDecks.Shared.DTOs.Requests
+namespace OpenDecks.Shared.DTOs.Responses.Form
 {
-    public class CreateFormFieldDto
+    public class FormFieldDto
     {
+        public Guid Id { get; set; }
         public string Label { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public string FieldType { get; set; } = string.Empty;

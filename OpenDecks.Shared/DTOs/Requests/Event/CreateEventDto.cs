@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OpenDecks.Shared.DTOs.Requests
+﻿namespace OpenDecks.Shared.DTOs.Requests.Event
 {
-    public class PatchEventDto
+    public class CreateEventDto
     {
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;

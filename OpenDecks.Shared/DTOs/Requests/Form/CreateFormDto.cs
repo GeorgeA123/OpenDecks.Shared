@@ -1,11 +1,10 @@
-﻿using OpenDecks.Shared.DTOs.Requests;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenDecks.Shared.DTOs.Requests
+namespace OpenDecks.Shared.DTOs.Requests.Form
 {
     public class CreateFormDto
     {

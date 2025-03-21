@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenDecks.Shared.DTOs.Responses
+namespace OpenDecks.Shared.DTOs.Responses.Form
 {
     public class FormDto
     {
