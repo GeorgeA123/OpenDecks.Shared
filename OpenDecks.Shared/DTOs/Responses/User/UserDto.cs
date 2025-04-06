@@ -16,6 +16,7 @@ namespace OpenDecks.Shared.DTOs.Responses.User
         public string PhoneNumber { get; set; } = string.Empty;
         public bool IsEmailConfirmed { get; set; }
         public string Role { get; set; } = string.Empty;
+        public string SupabaseId { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
