@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenDecks.Shared.DTOs.Responses.Event;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace OpenDecks.Shared.DTOs.Responses.User
         public string SupabaseId { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
-
+        public List<EventDto> OrganizedEvents { get; set; } = new List<EventDto>();
         public string FullName => $"{FirstName} {LastName}".Trim();
     }
 }
