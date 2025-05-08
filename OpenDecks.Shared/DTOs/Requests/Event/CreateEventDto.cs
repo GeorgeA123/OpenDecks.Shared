@@ -9,6 +9,7 @@
         public string Location { get; set; } = string.Empty;
         public int MaxApplicants { get; set; }
 
+        public Guid? BrandId { get; set; }
         public Guid? EventSeriesId { get; set; }
     }
 }
