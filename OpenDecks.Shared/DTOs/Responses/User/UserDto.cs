@@ -1,4 +1,5 @@
 ﻿using OpenDecks.Shared.DTOs.Responses.Event;
+using OpenDecks.Shared.DTOs.Responses.UserBrand;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,5 +23,7 @@ namespace OpenDecks.Shared.DTOs.Responses.User
         public DateTime UpdatedAt { get; set; }
         public List<EventDto> OrganizedEvents { get; set; } = new List<EventDto>();
         public string FullName => $"{FirstName} {LastName}".Trim();
+
+        public List<UserBrandDto> Brands { get; set; } = new List<UserBrandDto>();
     }
 }
