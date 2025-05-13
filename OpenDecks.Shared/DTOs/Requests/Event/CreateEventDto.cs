@@ -8,7 +8,7 @@
         public DateTime ApplicationDeadline { get; set; }
         public string Location { get; set; } = string.Empty;
         public int MaxApplicants { get; set; }
-
+        public string ImageUrl { get; set; }
         public Guid? BrandId { get; set; }
         public Guid? EventSeriesId { get; set; }
     }
