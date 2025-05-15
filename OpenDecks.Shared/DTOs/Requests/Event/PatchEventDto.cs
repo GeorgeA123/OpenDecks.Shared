@@ -15,7 +15,7 @@ namespace OpenDecks.Shared.DTOs.Requests.Event
         public string Location { get; set; } = string.Empty;
         public int MaxApplicants { get; set; }
         public string Status { get; set; } = string.Empty;
-
+        public string ImageUrl { get; set; } = string.Empty;
         public Guid? BrandId { get; set; }
     }
 }

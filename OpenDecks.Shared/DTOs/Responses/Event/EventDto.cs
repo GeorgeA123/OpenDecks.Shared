@@ -17,7 +17,7 @@ namespace OpenDecks.Shared.DTOs.Responses.Event
         public string Location { get; set; } = string.Empty;
         public int MaxApplicants { get; set; }
         public string Status { get; set; } = string.Empty;
-
+    
         public string ImageUrl { get; set; } = string.Empty;
         public Guid OrganizerId { get; set; }
         public string OrganizerName { get; set; } = string.Empty;
