@@ -1,4 +1,6 @@
-﻿namespace OpenDecks.Shared.DTOs.Requests.Event
+﻿using OpenDecks.Shared.DTOs.Requests.Venue;
+
+namespace OpenDecks.Shared.DTOs.Requests.Event
 {
     public class CreateEventDto
     {
@@ -11,5 +13,7 @@
         public string ImageUrl { get; set; }
         public Guid? BrandId { get; set; }
         public Guid? EventSeriesId { get; set; }
+
+        public CreateVenueDto? Venue { get; set; }
     }
 }

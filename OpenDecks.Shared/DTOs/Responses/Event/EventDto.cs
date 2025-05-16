@@ -1,9 +1,5 @@
 ﻿using OpenDecks.Shared.DTOs.Responses.Form;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OpenDecks.Shared.DTOs.Responses.Venue.VenueDto;
 
 namespace OpenDecks.Shared.DTOs.Responses.Event
 {
@@ -24,6 +20,9 @@ namespace OpenDecks.Shared.DTOs.Responses.Event
         public Guid? BrandId { get; set; }
         public string? BrandName { get; set; } = string.Empty;
         public Guid? EventSeriesId { get; set; }
+        
+        public VenueDto? Venue { get; set; }
+
         public FormDto? Form { get; set; }
     }
 }
