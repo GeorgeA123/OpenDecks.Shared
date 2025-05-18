@@ -1,6 +1,6 @@
-﻿using OpenDecks.Shared.DTOs.Responses.Application;
-using System;
-using System.Collections.Generic;
+﻿
+
+using OpenDecks.Shared.DTOs.Responses.Application;
 
 namespace OpenDecks.Shared.DTOs.Responses
 {
