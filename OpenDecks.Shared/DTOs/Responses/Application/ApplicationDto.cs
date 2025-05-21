@@ -1,6 +1,7 @@
 ﻿
 
 using OpenDecks.Shared.DTOs.Responses.Application;
+using OpenDecks.Shared.DTOs.Responses.Event;
 
 namespace OpenDecks.Shared.DTOs.Responses
 {
@@ -16,5 +17,7 @@ namespace OpenDecks.Shared.DTOs.Responses
         public string EventName { get; set; } = string.Empty;
         public string ApplicantName { get; set; } = string.Empty;
         public List<ApplicationResponseDto> Responses { get; set; } = new();
+
+        public EventDto Event { get; set; }
     }
 }
