@@ -7,13 +7,16 @@ namespace OpenDecks.Shared.DTOs.Responses.Event
     {
         public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;
+
+        public required string UrlEventName { get; set; }
+
         public string Description { get; set; } = string.Empty;
         public DateTime EventDate { get; set; }
         public DateTime ApplicationDeadline { get; set; }
         public string Location { get; set; } = string.Empty;
         public int MaxApplicants { get; set; }
         public string Status { get; set; } = string.Empty;
-    
+        
         public string ImageUrl { get; set; } = string.Empty;
         public Guid OrganizerId { get; set; }
         public string OrganizerName { get; set; } = string.Empty;
