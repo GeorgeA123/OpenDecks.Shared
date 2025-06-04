@@ -22,6 +22,7 @@ namespace OpenDecks.Shared.DTOs.Responses.Event
         public string OrganizerName { get; set; } = string.Empty;
         public Guid? BrandId { get; set; }
         public string? BrandName { get; set; } = string.Empty;
+        public string? BrandUrlName { get; set; } = string.Empty;
         public Guid? EventSeriesId { get; set; }
         
         public VenueDto? Venue { get; set; }
