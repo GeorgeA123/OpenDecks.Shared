@@ -12,20 +12,20 @@ namespace OpenDecks.Shared.DTOs.Responses.Application
         public string ResponseValue { get; set; } = string.Empty;
         public ResponseType ResponseType { get; set; } = ResponseType.String;
 
-        public object GetTypedValue()
+        public object? GetTypedValue()
         {
             switch (ResponseType)
             {
                 case ResponseType.Number:
-                    return decimal.TryParse(ResponseValue, out var numValue) ? numValue : null;
+                    return decimal.TryParse(ResponseValue, out var numValue) ? (object)numValue : null;
 
                 case ResponseType.DateTime:
-                    return DateTime.TryParse(ResponseValue, out var dateValue) ? dateValue : null;
+                    return DateTime.TryParse(ResponseValue, out var dateValue) ? (object)dateValue : null;
 
                 case ResponseType.JsonArray:
                     try
                     {
-                        return JsonSerializer.Deserialize<List<string>>(ResponseValue);
+                        return JsonSerializer.Deserialize<List<string>>(ResponseValue) ?? (object)ResponseValue;
                     }
                     catch
                     {
