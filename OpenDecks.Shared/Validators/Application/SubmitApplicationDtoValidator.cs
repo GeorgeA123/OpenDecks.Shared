@@ -20,7 +20,7 @@ namespace OpenDecks.Shared.Validators.Application
                 .SetValidator(new ApplicationFieldResponseDtoValidator());
 
             _ = RuleFor(a => a.AnonymousUser)
-                .SetValidator(new AnonymousUserInfoValidator())
+                .SetValidator(new AnonymousUserInfoValidator()!)
                 .When(a => a.AnonymousUser != null);
         }
     }

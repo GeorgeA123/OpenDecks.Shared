@@ -18,6 +18,6 @@ namespace OpenDecks.Shared.DTOs.Responses
         public string ApplicantName { get; set; } = string.Empty;
         public List<ApplicationResponseDto> Responses { get; set; } = new();
 
-        public EventDto Event { get; set; }
+        public EventDto Event { get; set; } = null!;
     }
 }

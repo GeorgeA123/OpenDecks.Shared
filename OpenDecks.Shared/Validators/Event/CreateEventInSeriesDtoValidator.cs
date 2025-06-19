@@ -28,7 +28,7 @@ namespace OpenDecks.Shared.Validators.Event
             });
 
             When(e => e.MaxApplicants.HasValue, () => {
-                RuleFor(e => e.MaxApplicants.Value)
+                RuleFor(e => e.MaxApplicants!.Value)
                     .GreaterThan(0).WithMessage("Maximum applicants must be greater than 0");
             });
         }
