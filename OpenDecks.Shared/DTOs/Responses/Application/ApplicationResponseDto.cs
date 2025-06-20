@@ -17,15 +17,16 @@ namespace OpenDecks.Shared.DTOs.Responses.Application
             switch (ResponseType)
             {
                 case ResponseType.Number:
-                    return decimal.TryParse(ResponseValue, out var numValue) ? numValue : null;
+                    return decimal.TryParse(ResponseValue, out var numValue) ? (object)numValue : ResponseValue;
 
                 case ResponseType.DateTime:
-                    return DateTime.TryParse(ResponseValue, out var dateValue) ? dateValue : null;
+                    return DateTime.TryParse(ResponseValue, out var dateValue) ? (object)dateValue : ResponseValue;
 
                 case ResponseType.JsonArray:
                     try
                     {
-                        return JsonSerializer.Deserialize<List<string>>(ResponseValue);
+                        var result = JsonSerializer.Deserialize<List<string>>(ResponseValue);
+                        return result ?? new List<string> { ResponseValue };
                     }
                     catch
                     {
