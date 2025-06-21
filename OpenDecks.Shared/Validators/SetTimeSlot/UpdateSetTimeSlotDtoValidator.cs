@@ -23,15 +23,6 @@ namespace OpenDecks.Shared.Validators.SetTimeSlot
                 .GreaterThan(s => s.StartTime).WithMessage("End time must be after start time")
                 .When(s => s.StartTime.HasValue && s.EndTime.HasValue);
 
-            // If start time is provided, it should be in the future
-            _ = RuleFor(s => s.StartTime)
-                .GreaterThan(DateTime.UtcNow).WithMessage("Start time must be in the future")
-                .When(s => s.StartTime.HasValue);
-
-            // If end time is provided, it should be in the future
-            _ = RuleFor(s => s.EndTime)
-                .GreaterThan(DateTime.UtcNow).WithMessage("End time must be in the future")
-                .When(s => s.EndTime.HasValue);
         }
     }
 }

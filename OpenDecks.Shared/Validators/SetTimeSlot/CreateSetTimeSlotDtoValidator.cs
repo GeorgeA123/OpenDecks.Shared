@@ -11,8 +11,7 @@ namespace OpenDecks.Shared.Validators.SetTimeSlot
                 .NotEmpty().WithMessage("Event ID is required");
 
             _ = RuleFor(s => s.StartTime)
-                .NotEmpty().WithMessage("Start time is required")
-                .GreaterThan(DateTime.UtcNow).WithMessage("Start time must be in the future");
+                .NotEmpty().WithMessage("Start time is required");
 
             _ = RuleFor(s => s.EndTime)
                 .NotEmpty().WithMessage("End time is required")
