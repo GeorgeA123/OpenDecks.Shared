@@ -15,7 +15,15 @@ namespace OpenDecks.Shared.DTOs.Responses
         public DateTime SubmittedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public string EventName { get; set; } = string.Empty;
-        public string ApplicantName { get; set; } = string.Empty;
+
+        public required string ApplicantFirstName { get; set; } = string.Empty;
+
+        public required string ApplicantEmail { get; set; } = string.Empty;
+
+        public string? ApplicantPhoneNumber { get; set; }
+
+        public required string ApplicantName { get; set; } = string.Empty;
+
         public List<ApplicationResponseDto> Responses { get; set; } = new();
 
         public EventDto Event { get; set; } = null!;
