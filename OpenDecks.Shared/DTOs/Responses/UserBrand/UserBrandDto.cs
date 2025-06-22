@@ -9,6 +9,6 @@ namespace OpenDecks.Shared.DTOs.Responses.UserBrand
         public Guid BrandId { get; set; }
         public string Role { get; set; } = string.Empty;
         public UserDto User { get; set; } = null!;
-
+        public BrandDto Brand { get; set; } = null!;
     }
 }
