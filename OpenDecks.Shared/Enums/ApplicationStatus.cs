@@ -9,6 +9,7 @@
         Rejected,
         Waitlisted,
         MessageSent,
+        UnsuccessfulMessageSent,
         Confirmed,
         Withdrawn
     }
