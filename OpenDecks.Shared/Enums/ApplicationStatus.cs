@@ -7,6 +7,9 @@
         UnderReview,
         Accepted,
         Rejected,
-        Waitlisted
+        Waitlisted,
+        MessageSent,
+        Confirmed,
+        Withdrawn
     }
 }
