@@ -17,17 +17,20 @@ namespace OpenDecks.Shared.Validators.Event
                 .GreaterThan(DateTime.UtcNow).WithMessage("Application deadline must be in the future");
 
             // Optional fields - only validate if provided
-            When(e => !string.IsNullOrEmpty(e.Name), () => {
+            When(e => !string.IsNullOrEmpty(e.Name), () =>
+            {
                 RuleFor(e => e.Name)
                     .MaximumLength(200).WithMessage("Event name cannot exceed 200 characters");
             });
 
-            When(e => !string.IsNullOrEmpty(e.Location), () => {
+            When(e => !string.IsNullOrEmpty(e.Location), () =>
+            {
                 RuleFor(e => e.Location)
                     .MaximumLength(500).WithMessage("Location cannot exceed 500 characters");
             });
 
-            When(e => e.MaxApplicants.HasValue, () => {
+            When(e => e.MaxApplicants.HasValue, () =>
+            {
                 RuleFor(e => e.MaxApplicants!.Value)
                     .GreaterThan(0).WithMessage("Maximum applicants must be greater than 0");
             });

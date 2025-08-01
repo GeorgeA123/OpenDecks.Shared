@@ -2,7 +2,7 @@
 
 namespace OpenDecks.Shared.DTOs.Requests.Event
 {
-	public class PatchEventDto
+    public class PatchEventDto
     {
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
@@ -13,9 +13,9 @@ namespace OpenDecks.Shared.DTOs.Requests.Event
         public string Status { get; set; } = string.Empty;
         public string ImageUrl { get; set; } = string.Empty;
         public Guid? BrandId { get; set; }
-		public Guid? VenueId { get; set; }
+        public Guid? VenueId { get; set; }
 
-		public CreateVenueDto? Venue { get; set; }
+        public CreateVenueDto? Venue { get; set; }
 
-	}
+    }
 }
