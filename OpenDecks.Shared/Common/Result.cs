@@ -12,22 +12,29 @@ namespace OpenDecks.Shared.Common
         public T Value { get; }
         public string Error { get; }
         public ErrorDetails? ErrorDetails { get; }
+        public ResultErrorType ErrorType { get; }
 
         // Private constructor - use static methods to create
-        private Result(bool isSuccess, T value, string error, ErrorDetails? errorDetails)
+        private Result(bool isSuccess, T value, string error, ErrorDetails? errorDetails, ResultErrorType errorType)
         {
             IsSuccess = isSuccess;
             Value = value;
             Error = error;
             ErrorDetails = errorDetails;
+            ErrorType = errorType;
         }
 
-        public static Result<T> Success(T value) => new Result<T>(true, value, string.Empty, null);
+        public static Result<T> Success(T value) => new Result<T>(true, value, string.Empty, null, ResultErrorType.None);
 
-        public static Result<T> Failure(string error) => new Result<T>(false, default!, error, null);
+        public static Result<T> Failure(string error) => new Result<T>(false, default!, error, null, ResultErrorType.Application);
+
+        public static Result<T> Failure(string error, ResultErrorType errorType) => new Result<T>(false, default!, error, null, errorType);
 
         public static Result<T> Failure(string error, ErrorDetails errorDetails) =>
-            new Result<T>(false, default!, error, errorDetails);
+            new Result<T>(false, default!, error, errorDetails, ResultErrorType.Validation);
+
+        public static Result<T> Failure(string error, ErrorDetails errorDetails, ResultErrorType errorType) =>
+            new Result<T>(false, default!, error, errorDetails, errorType);
     }
 
 
@@ -36,18 +43,23 @@ namespace OpenDecks.Shared.Common
         public bool IsSuccess { get; }
         public string Error { get; }
         public ErrorDetails? ErrorDetails { get; }
+        public ResultErrorType ErrorType { get; }
 
-        private Result(bool isSuccess, string error, ErrorDetails? errorDetails)
+        private Result(bool isSuccess, string error, ErrorDetails? errorDetails, ResultErrorType errorType)
         {
             IsSuccess = isSuccess;
             Error = error;
             ErrorDetails = errorDetails;
+            ErrorType = errorType;
         }
 
-        public static Result Success() => new Result(true, string.Empty, null);
-        public static Result Failure(string error) => new Result(false, error, null);
+        public static Result Success() => new Result(true, string.Empty, null, ResultErrorType.None);
+        public static Result Failure(string error) => new Result(false, error, null, ResultErrorType.Application);
+        public static Result Failure(string error, ResultErrorType errorType) => new Result(false, error, null, errorType);
         public static Result Failure(string error, ErrorDetails errorDetails) =>
-            new Result(false, error, errorDetails);
+            new Result(false, error, errorDetails, ResultErrorType.Validation);
+        public static Result Failure(string error, ErrorDetails errorDetails, ResultErrorType errorType) =>
+            new Result(false, error, errorDetails, errorType);
 
 
         public static implicit operator bool(Result result) => result.IsSuccess;
