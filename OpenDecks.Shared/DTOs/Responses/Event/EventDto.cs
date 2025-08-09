@@ -16,7 +16,7 @@ namespace OpenDecks.Shared.DTOs.Responses.Event
         public string Location { get; set; } = string.Empty;
         public int MaxApplicants { get; set; }
         public string Status { get; set; } = string.Empty;
-        
+
         public string ImageUrl { get; set; } = string.Empty;
         public Guid OrganizerId { get; set; }
         public string OrganizerName { get; set; } = string.Empty;
@@ -24,7 +24,7 @@ namespace OpenDecks.Shared.DTOs.Responses.Event
         public string? BrandName { get; set; } = string.Empty;
         public string? UrlBrandName { get; set; } = string.Empty;
         public Guid? EventSeriesId { get; set; }
-        
+
         public VenueDto? Venue { get; set; }
 
         public FormDto? Form { get; set; }
